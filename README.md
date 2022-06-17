@@ -37,8 +37,11 @@
 ### POCZĄTKOWA KONFIGURACJA
 
 1. Skonfigurować plik .gitignore dodając wykluczenia dla moich folderów _tmp i _resources
-2. Połączyć projekt z GitHub
-3. `php artisan migrate` - uruchomić migrację
+2. Połączyć projekt z GitHub i zrobić `initial commit`
+3. `composer self-update` - updatować composer
+4. `composer install` - zainstalować wszystkie potrzebne pakiety
+5. `composer update` - robi update wszystkich zainstalowanych pakietów
+6. `php artisan migrate` - uruchomić migrację
 
 ### AUTOMATYCZNE ODŚWIEŻANIE STRONY
 
