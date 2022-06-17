@@ -1,11 +1,11 @@
 <div align="center">
     <h1>PHP Laravel</h1>
     <h3>
-        <a href="/">
+        <a href="#">
             Live demo
         </a>
         <span> | </span>
-        <a href="https://github.com/chriskodehub/KH-15_calculator">
+        <a href="https://github.com/everstudybee/s6-zad-php-laravel">
             GitHub
         </a>
     </h3>
@@ -41,7 +41,11 @@
 3. `composer self-update` - updatować composer
 4. `composer install` - zainstalować wszystkie potrzebne pakiety
 5. `composer update` - robi update wszystkich zainstalowanych pakietów
-6. `php artisan migrate` - uruchomić migrację
+6. Konfiguracja `charset` i `collation` w pliku `config/database.php`
+7. Konfiguracja podłączenia do bazy danych w pliku `.env` pozycja `B_DATABASE=`
+8. Utworzyć pustą bazę danych o ustalonej w punkcie `7.` nazwie i w punkcie `6.` collation.
+9. `php artisan migrate` - uruchomić migrację, komenda utworzy bazę danych
+10. `fsfs` - komenda wgra dane testowe do bazy danych
 
 ### AUTOMATYCZNE ODŚWIEŻANIE STRONY
 
