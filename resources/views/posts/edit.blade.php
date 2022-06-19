@@ -10,7 +10,7 @@
                 <div class="input-field col s4">
                     <i class="material-icons prefix">input</i>
                     <input id="tytul" type="text" name="Title" value="{{$post->Title}}" class="validate validator-required">
-                    <label for="nazwa">Tytuł</label>
+                    <label for="tytul">Tytuł</label>
                     <span class="helper-text" id="tytul-helper"></span>
                 </div>
                 <div class="input-field col s4">

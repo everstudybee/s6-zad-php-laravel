@@ -46,7 +46,6 @@
             $post->ShortDescription = $request->input('ShortDescription');
             $post->ContentHTML = $request->input('ContentHTML');
             $post->IsPublic = true;
-            $post->IsCancelled = false;
             $post->PublishDateTime = date('y-m-d h:i:s');
             // CreationDateTime i EditDateTime też są wymagane ale Laravel generuje je automatycznie
             // I przypisujemy je w pliku Post.php jako CREATED_AT i UPDATED_AT

@@ -12,7 +12,7 @@
                     <i class="material-icons prefix">input</i>
                     {{-- clasa validatro-required jest potrzebna do wywoływania walidacji z pliku validator.js --}}
                     <input id="tytul" type="text" name="Title" class="validate validator-required">
-                    <label for="nazwa">Tytuł</label>
+                    <label for="tytul">Tytuł</label>
                     <span class="helper-text" id="tytul-helper"></span>
                 </div>
                 <div class="input-field col s4">
