@@ -51,12 +51,14 @@ Po pobraniu projektu z GitHub
 11. `php artisan db:seed` - wgraj dane testowe do bazy danych
 12. `npm install` - zainstaluj pakiety node z pliku package.json, są potrzebne w dalszej konfiguracji, zostanie utworzony folder node_modules ze wszystkimi pakietami
 
+> Należy koniecznie przejść kolejny punkt, aby Webpack wygenerował aktualne plik `*.js` i `*.cs`
+
 ### AUTOMATYCZNE ODŚWIEŻANIE STRONY
 
 1. https://stackoverflow.com/questions/49392001/laravel-project-auto-refresh-after-changes
 2. `mix.browserSync('127.0.0.1:8000');` - dodać na końcu pliku webpack.mix.js na końcu
 3. `php artisan serve` - najpierw uruchomić serwer artisan
-4. `npm run watch` - po uruchomieniu Webpack za pierwszym razem zostaną zainstalowane potrzebne zależności. Po drugim uruchomieniu wszystko będzie działało.
+4. `npm run watch` - należy otworzyć drugie okno terminala, ponieważ oba poleceniu muszą być uruchomione w tym samym czasie. Po uruchomieniu Webpack za pierwszym razem zostaną zainstalowane potrzebne zależności. Po drugim uruchomieniu wszystko będzie działało.
 
 ### JS i CSS KOMPILOWANY ZA POMOCĄ WEBPACK
 
