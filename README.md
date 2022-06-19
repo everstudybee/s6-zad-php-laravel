@@ -51,7 +51,9 @@ Po pobraniu projektu z GitHub
 11. `php artisan db:seed` - wgraj dane testowe do bazy danych
 12. `npm install` - zainstaluj pakiety node z pliku package.json, są potrzebne w dalszej konfiguracji, zostanie utworzony folder node_modules ze wszystkimi pakietami
 
-> Należy koniecznie przejść kolejny punkt, aby Webpack wygenerował aktualne plik `*.js` i `*.cs`
+> UWAGA !!!  
+> Należy koniecznie przejść przez kolejny punkt, aby Webpack wygenerował aktualne plik `*.js` i `*.cs`
+
 
 ### AUTOMATYCZNE ODŚWIEŻANIE STRONY
 

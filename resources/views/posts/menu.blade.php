@@ -10,5 +10,8 @@
         <a href="/posts" class="btn waves-effect waves-light">Wszystkie posty
             <i class="material-icons right">list</i>
         </a>
+        <a href="/posts/deleted" class="btn waves-effect waves-light">Usunięte posty
+            <i class="material-icons right">list</i>
+        </a>
     </div>
 @endsection

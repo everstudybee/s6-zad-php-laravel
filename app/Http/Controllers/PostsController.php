@@ -27,7 +27,16 @@
             $post->Link = $request->input('Link');
             $post->ShortDescription = $request->input('ShortDescription');
             $post->ContentHTML = $request->input('ContentHTML');
-            $post->EditDateTime = date('y-m-d h:i:s');
+            $post->EditDateTime = date('y-m-d H:i:s');
+            $post->MetaDescription = $request->input('MetaDescription');
+            $post->MetaTags = $request->input('MetaTags');
+            $post->Notes = $request->input('Notes');
+            if ($request->has('is-public'))
+            {
+                $post->IsPublic = true;
+            } else {
+                $post->IsPublic = false;
+            }
             $post->save();
             return redirect('/posts');
         }
@@ -45,10 +54,18 @@
             $post->Link = $request->input('Link');
             $post->ShortDescription = $request->input('ShortDescription');
             $post->ContentHTML = $request->input('ContentHTML');
-            $post->IsPublic = true;
-            $post->PublishDateTime = date('y-m-d h:i:s');
+            $post->PublishDateTime = date('y-m-d H:i:s');
             // CreationDateTime i EditDateTime też są wymagane ale Laravel generuje je automatycznie
             // I przypisujemy je w pliku Post.php jako CREATED_AT i UPDATED_AT
+            $post->MetaDescription = $request->input('MetaDescription');
+            $post->MetaTags = $request->input('MetaTags');
+            $post->Notes = $request->input('Notes');
+            if ($request->has('is-public'))
+            {
+                $post->IsPublic = true;
+            } else {
+                $post->IsPublic = false;
+            }
             $post->IsActive = true;
             $post->save();
             return redirect('/posts');
@@ -58,6 +75,22 @@
         public function delete($id) {
             $post = (new Post)->find($id);
             $post->IsActive = false;
+            $post->EditDateTime = date('y-m-d H:i:s');
+            $post->save();
+            return redirect('/posts');
+        }
+
+        public function showDeleted()
+        {
+            $posts = (new Post)->where('IsActive', '=', false)->get();
+
+            return view("posts.deleted", ['posts' => $posts]);
+        }
+
+        public function unDelete($id) {
+            $post = (new Post)->find($id);
+            $post->IsActive = true;
+            $post->EditDateTime = date('y-m-d H:i:s');
             $post->save();
             return redirect('/posts');
         }

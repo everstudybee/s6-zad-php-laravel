@@ -41,3 +41,9 @@
 
     // usunięcie postu
     Route::get('/posts/delete/{id}', [PostsController::class, 'delete']);
+
+    // usunięte posty
+    Route::get('/posts/deleted', [PostsController::class, 'showDeleted']);
+
+    // przywrócenie postu
+    Route::get('/posts/undelete/{id}', [PostsController::class, 'unDelete']);

@@ -31,7 +31,28 @@
                     <label for="textarea2">Treść listu</label>
                     <span class="helper-text" id="textarea2-helper"></span>
                 </div>
-                <div class="col s12">
+                <div class="input-field col s12">
+                    <textarea id="textarea3" class="materialize-textarea" name="MetaDescription"></textarea>
+                    <label for="textarea3">Opis meta</label>
+                    <span class="helper-text" id="textarea3-helper"></span>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea4" class="materialize-textarea" name="MetaTags"></textarea>
+                    <label for="textarea4">Tagi meta</label>
+                    <span class="helper-text" id="textarea4-helper"></span>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea5" class="materialize-textarea" name="Notes"></textarea>
+                    <label for="textarea5">Notes</label>
+                    <span class="helper-text" id="textarea5-helper"></span>
+                </div>
+                <div class="input col s12">
+                    <label>
+                        <input type="checkbox" name="is-public" class="filled-in"/>
+                        <span>Czy opublikowany</span>
+                    </label>
+                </div>
+                <div class="col s12" style="margin-top: 20px">
                     <div class="submit-field input-field">
                         <button class="btn waves-effect waves-light" type="submit">Dodaj
                             <i class="material-icons right">add</i>
