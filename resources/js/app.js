@@ -1,1 +1,1 @@
-require('./bootstrap');
+require('./materialize.min');

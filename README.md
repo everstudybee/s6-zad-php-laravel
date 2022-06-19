@@ -36,24 +36,27 @@
 
 ### POCZĄTKOWA KONFIGURACJA
 
-1. Skonfigurować plik .gitignore dodając wykluczenia dla moich folderów _tmp i _resources
-2. Połączyć projekt z GitHub i zrobić `initial commit`
-3. `composer self-update` - updatować composer
-4. `composer install` - zainstalować wszystkie potrzebne pakiety
-5. `composer update` - robi update wszystkich zainstalowanych pakietów
-6. Konfiguracja `charset` i `collation` w pliku `config/database.php`
-7. Konfiguracja podłączenia do bazy danych w pliku `.env` pozycja `B_DATABASE=`
-8. Utworzyć pustą bazę danych o ustalonej w punkcie `7.` nazwie i w punkcie `6.` collation.
-9. `php artisan migrate` - uruchomić migrację, komenda utworzy bazę danych
-10. `fsfs` - komenda wgra dane testowe do bazy danych
+Po pobraniu projektu z GitHub
+
+1. Polecenia wydajemy w terminalu w folderze projektu
+2. `composer self-update` - updatuj composer, jeśli jest nowsza wersja
+3. `composer install` - zainstaluj wszystkie potrzebne pakiety z pliku composer.json, zostanie utworzony folder vendor ze wszystkimi pakietami
+4. `composer update` - zrób update wszystkich zainstalowanych pakietów
+5. Konfiguracja `charset` i `collation` w pliku `config/database.php`
+6. Zamień nazwę pliku `.env.example` na `.env`
+7. `php artisan key:generate` - wygeneruj unikalny klucz aplikacji (NIEZBĘDNY KROK), będzie on zapisany w pliku .env
+8. `Konfiguracja podłączenia do bazy danych`. W pliku `.env` pozycja `B_DATABASE=` podaj nazwę bazy danych i ewentualnie skonfiguruj inne parametry takie jak IP, PORT, USER i PASSWORD.
+9. `Utwórz pustą bazę danych` o ustalonej w punkcie `8.` nazwie i collation ustawionym w punkcie `5.` collation
+10. `php artisan migrate` - uruchom migrację, komenda utworzy [1] tablicę zawierającą dane, [2] tablicę z informacjami o migracjach, [3] tablicę zawierającą osobiste tokeny
+11. `php artisan db:seed` - wgraj dane testowe do bazy danych
+12. `npm install` - zainstaluj pakiety node z pliku package.json, są potrzebne w dalszej konfiguracji, zostanie utworzony folder node_modules ze wszystkimi pakietami
 
 ### AUTOMATYCZNE ODŚWIEŻANIE STRONY
 
 1. https://stackoverflow.com/questions/49392001/laravel-project-auto-refresh-after-changes
-2. `npm install` - instaluje wszystkie pakiety z pliku package.json
-3. `mix.browserSync('127.0.0.1:8000');` - dodać na końcu pliku webpack.mix.js
-4. `php artisan serve` - najpierw uruchomić serwer artisan
-5. `npm run watch` - po uruchomieniu Webpack za pierwszym razem zostaną zainstalowane potrzebne zależności. Po drugim uruchomieniu wszystko będzie działało.
+2. `mix.browserSync('127.0.0.1:8000');` - dodać na końcu pliku webpack.mix.js na końcu
+3. `php artisan serve` - najpierw uruchomić serwer artisan
+4. `npm run watch` - po uruchomieniu Webpack za pierwszym razem zostaną zainstalowane potrzebne zależności. Po drugim uruchomieniu wszystko będzie działało.
 
 ### JS i CSS KOMPILOWANY ZA POMOCĄ WEBPACK
 
